@@ -16,14 +16,14 @@ function add(numbers) {
     }
 
   // Ignore Numbers Greater Than 1000
-  let sum = 0;
-    for (let num of numArray) {
-        const parsedNum = parseInt(num);
-        if (parsedNum <= 1000) {
-            sum += parsedNum;
-        }
-    }
-    return sum;
+  // let sum = 0;
+  //   for (let num of numArray) {
+  //       const parsedNum = parseInt(num);
+  //       if (parsedNum <= 1000) {
+  //           sum += parsedNum;
+  //       }
+  //   }
+  //   return sum;
 }
 
 module.exports = {
