@@ -10,10 +10,10 @@ function add(numbers) {
     }
 
   // Handle two numbers
-  const numArray = numbers.split(",");
-    if (numArray.length === 2) {
-        return parseInt(numArray[0]) + parseInt(numArray[1]);
-    }
+  // const numArray = numbers.split(",");
+  //   if (numArray.length === 2) {
+  //       return parseInt(numArray[0]) + parseInt(numArray[1]);
+  //   }
 
   // Ignore Numbers Greater Than 1000
   // let sum = 0;
