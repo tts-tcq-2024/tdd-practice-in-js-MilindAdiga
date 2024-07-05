@@ -1,13 +1,13 @@
 function add(numbers) {
   // With empty string
-    if (numbers === "") {
-        return 0;
-    }
+  //   if (numbers === "") {
+  //       return 0;
+  //   }
 
-  // With a zero
-   if (numbers === "0") {
-        return 0;
-    }
+  // // With a zero
+  //  if (numbers === "0") {
+  //       return 0;
+  //   }
 
   // Handle two numbers
   // const numArray = numbers.split(",");
@@ -24,6 +24,25 @@ function add(numbers) {
   //       }
   //   }
   //   return sum;
+
+  if (numbers === "") {
+        return 0;
+    }
+    let delimiter = ",";
+    if (numbers.startsWith("//")) {
+        const parts = numbers.split("\n");
+        delimiter = parts[0].substring(2);
+        numbers = parts[1];
+    }
+    const numArray = numbers.split(new RegExp(`[${delimiter},\n]`));
+    let sum = 0;
+    for (let num of numArray) {
+        const parsedNum = parseInt(num);
+        if (!isNaN(parsedNum) && parsedNum <= 1000) {
+            sum += parsedNum;
+        }
+    }
+    return sum;
 }
 
 module.exports = {
